@@ -201,48 +201,48 @@
 // // work2.generateReports(); // error Property 'generateReports' does not exist on type 'Department'
 
 
-//高级技巧 构造函数
-class Greeter {
-    static StaticValue = 'hello';
-    greeting:string;
-    constructor(message:string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "hello "+this.greeting;
-    }
-}
-let greeter1:Greeter;
-greeter1 = new Greeter('pxp');
-console.log(greeter1.greet());
-console.log(Greeter.StaticValue);
-//将Greeter编译后查看js
-// var Greeter = /** @class */ (function () {
-//     function Greeter(message) {
+// //高级技巧 构造函数
+// class Greeter {
+//     static StaticValue = 'hello';
+//     greeting:string;
+//     constructor(message:string) {
 //         this.greeting = message;
 //     }
-//     Greeter.prototype.greet = function () {
-//         return "hello " + this.greeting;
-//     };
-//     Greeter.StaticValue = 'hello';
-//     return Greeter;
-// }());
-// var greeter1;
+//     greet() {
+//         return "hello "+this.greeting;
+//     }
+// }
+// let greeter1:Greeter;
 // greeter1 = new Greeter('pxp');
 // console.log(greeter1.greet());
 // console.log(Greeter.StaticValue);
+// //将Greeter编译后查看js
+// // var Greeter = /** @class */ (function () {
+// //     function Greeter(message) {
+// //         this.greeting = message;
+// //     }
+// //     Greeter.prototype.greet = function () {
+// //         return "hello " + this.greeting;
+// //     };
+// //     Greeter.StaticValue = 'hello';
+// //     return Greeter;
+// // }());
+// // var greeter1;
+// // greeter1 = new Greeter('pxp');
+// // console.log(greeter1.greet());
+// // console.log(Greeter.StaticValue);
 
 
-//把类当做接口使用
-class Point {
-    x:number;
-    y:number;
-}
-interface Point3d extends Point {
-    z:number;
-}
-let point3d:Point3d;
-point3d = {x:1,y:2,z:4}
+// //把类当做接口使用
+// class Point {
+//     x:number;
+//     y:number;
+// }
+// interface Point3d extends Point {
+//     z:number;
+// }
+// let point3d:Point3d;
+// point3d = {x:1,y:2,z:4}
 
 
 
